@@ -24,12 +24,12 @@ a {
  color: brown;
 }
 
-a :nover {
+a:nover {
     color: #555;
 }
 
 /* Header */
-.navbar-light .navbar-nav .navbar-linr{
+.navbar-light .navbar-nav .nav-link{
  color: #111;
  font-weight: 500;
  text-transform: uppercase;
@@ -40,4 +40,18 @@ a :nover {
     left: auto;
 }
 
+
+.top-menu li a ::after{
+content:'';
+display: block;
+width: 100%;
+background-color: #111;
+height: 1px;
+transition: all .3s;
+transform: scale(0);
+}
+
+.top-menu li a :hover::after{
+    transform: scale(1);
+    }
 /* Header */
