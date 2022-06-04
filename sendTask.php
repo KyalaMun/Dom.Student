@@ -97,7 +97,7 @@ if(!mysqli_query($link, $query_create_task)){
 }
 
 // Перенаправляем...
-header('Location: /index.php');
+header('Location: ./index.php');
 
 mysqli_close($link);
 ?>
