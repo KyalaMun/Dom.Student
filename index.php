@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <form action="/php/sendTask.php" method="post" id="send-form">
+                    <form action="sendTask.php" method="post" id="send-form">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">

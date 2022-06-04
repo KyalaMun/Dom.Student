@@ -24,6 +24,10 @@ echo "$name, $address, $email, $phone, $text</br>";
 
 // Коннектим БД и палим данные :) (уже нет)
 
+
+
+
+
 // $link = mysqli_connect('host', 'user', 'password', "db");
 
 if ($link === false) {
@@ -93,7 +97,7 @@ if(!mysqli_query($link, $query_create_task)){
 }
 
 // Перенаправляем...
-header('Location: ../index.php');
+header('Location: /index.php');
 
 mysqli_close($link);
 ?>
