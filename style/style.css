@@ -55,3 +55,29 @@ transform: scale(0);
     transform: scale(1);
     }
 /* Header */
+
+header{
+    min-height: 90px;
+    margin-bottom: 130px;
+}
+
+.contact .info .info-icon{
+    background-color: red;
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.contact .info h4{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.contact .info p{
+    font-size: 14px;
+}
