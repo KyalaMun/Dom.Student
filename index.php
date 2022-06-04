@@ -1,24 +1,25 @@
 <!doctype html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
     <title>Студенты алкаши придумали новый проект</title>
-  </head>
-  <body>
-    <header>
-     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-        <div class="container">
-            <a href="" class="navbar-brand">Dom.Student</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-            aria-controls="navbarContent" aria-expanded="false">
-            <span class="navbar-toggler-icon"></span>
-            </button>
+</head>
 
-            <div class="collapse navbar-collapse" id="navbarContent">
-               <!-- <ul class="navbar-nav mе-auto mb-2 top-menu">
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <div class="container">
+                <a href="" class="navbar-brand">Dom.Student</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <!-- <ul class="navbar-nav mе-auto mb-2 top-menu">
                     <li class="nav-item">
                         <a href="" class="nav-link">Заявки</a>
                     </li>
@@ -30,11 +31,11 @@
                     </li>
                 </ul>-->
 
-                
-                <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <button class="btn btn-outline-success dropdown-item"><a href="login.html">Войти</a></button>
-                </div>
-                <!--<ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+
+                    <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                        <button class="btn btn-outline-success dropdown-item"><a href="login.html">Войти</a></button>
+                    </div>
+                    <!--<ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     
                     <li class="nav-items dropdown">
                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-user">КАРТИНКУ СЮДА</i></a>
@@ -47,19 +48,19 @@
                     </ul>                     
                 </li>
                 </ul>-->
+                </div>
             </div>
-        </div>
-     </nav> 
-     </header>
-     <section class="contact">
+        </nav>
+    </header>
+    <section class="contact">
         <div class="container">
             <div class="row mt-5">
                 <div class="col-lg-4">
                     <div class="info">
-                        <div class="adress">     
+                        <div class="adress">
                             <div class="info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
                                 </svg>
                             </div>
                             <h4>Адрес</h4>
@@ -68,7 +69,7 @@
                         <div class="email">
                             <div class="info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                 </svg>
                             </div>
                             <h4>E-mail</h4>
@@ -77,8 +78,8 @@
                         <div class="phone">
                             <div class="info-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
-                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                                    <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                                    <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                                 </svg>
                             </div>
                             <h4>Телефон</h4>
@@ -87,42 +88,42 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <form action="/addTask.php" method="post" id="send-form">
+                    <form action="/php/sendTask.php" method="post" id="send-form">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <input type="text" id="name" placeholder="Имя" class="form-control mb-3 " required>
+                                    <input type="text" name="name" placeholder="Имя" class="form-control mb-3" form="send-form" required>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" id="address" id="Адрес" class="form-control mb-3" required>
+                                        <input type="text" name="address" id="Адрес" class="form-control mb-3" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="email" id="email" placeholder="E-mail" class="form-control mb-3" required>
+                                        <input type="email" name="email" placeholder="E-mail" class="form-control mb-3" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="number" id="phone"  placeholder="Телефон" class="form-control mb-3" required>
+                                        <input type="number" name="phone" placeholder="Телефон" class="form-control mb-3" required>
                                     </div>
                                 </div>
-                               <div class="col-12">
-                                   <textarea placeholder="Ваше сообщение" class="form-control mt-3" id="text" cols="30" rows="10"></textarea>
-                                   <button class="btn btn-primary mt-3">Отправить</button>
-                               </div>
+                                <div class="col-12">
+                                    <textarea placeholder="Ваше сообщение" class="form-control mt-3" name="problem_text" form="send-form" cols="30" rows="10"></textarea>
+                                    <button class="btn btn-primary mt-3" type="submit" send=>Отправить</button>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-        
-     </section>
-  
-     <!--Modal -->
-     <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-bs-labelledby="exampleModalLabel" aria-hidden="true"> 
+
+    </section>
+
+    <!--Modal -->
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-bs-labelledby="exampleModalLabel" aria-hidden="true"> 
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -189,7 +190,8 @@
             </div>
         </div>
      </div>-->
-     <!--Modal -->
- </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!--Modal -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 </html>
