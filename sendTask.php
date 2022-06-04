@@ -22,18 +22,23 @@ if (isset($_POST["problem_text"])) {
 
 echo "$name, $address, $email, $phone, $text</br>";
 
-// Коннектим БД и палим данные :) (уже нет)
 
+// Данные для подключения берутся из db.info
+$file = fopen("./db.info", "r");
 
+$host = trim(fgets($file));
+$user = trim(fgets($file));
+$password = trim(fgets($file));
+$db = trim(fgets($file));
 
+fclose($file);
 
-
-// $link = mysqli_connect('host', 'user', 'password', "db");
+echo "</br>$host </br>$user </br>$password</br> $db";
+$link = mysqli_connect($host, $user, $password, $db);
 
 if ($link === false) {
     die("Ошибка: " . mysqli_connect_error());
 }
-echo "Подключение успешно установлено";
 
 // Дай мне силы
 // Give me strong?
