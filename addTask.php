@@ -26,11 +26,8 @@ echo "$name, $address, $email, $phone, $text";
 // }
 
 // Коннектим БД и палим данные :)
-$link = mysqli_connect('//new-bokino.ru:49158', 'Volyna', 'duyv73pj');
-if ( !$link ) die("Error");
+$link = mysqli_connect('new-bokino.ru:49158', 'Volyna', 'duyv73pj');
 
-
-$link = mysqli_connect("localhost", "root", "mypassword");
 if ($link === false) {
   die("Ошибка: " . mysqli_connect_error());
 } 
