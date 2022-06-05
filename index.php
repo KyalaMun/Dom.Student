@@ -33,7 +33,7 @@
 
 
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <button class="btn btn-outline-success dropdown-item"><a href="login.php">Войти</a></button>
+                        <a href="login.php" class="btn btn-outline-success dropdown-item">Войти</a>
                     </div>
                     <!--<ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     
