@@ -1,5 +1,5 @@
 <?php
-
+$config = include 'config.php';
 header("Content-Type: text/html; charset=UTF-8");
 
 // Забираем данные из формы
@@ -22,16 +22,12 @@ if (isset($_POST["problem_text"])) {
 
 echo "$name, $address, $email, $phone, $text</br>";
 
+$host = $config["host"];
+$user = $config["user"];
+$password = $config["password"];
+$db = $config["db   "];
 
-// Данные для подключения берутся из db.info
-$file = fopen("./db.info", "r");
-
-$host = trim(fgets($file));
-$user = trim(fgets($file));
-$password = trim(fgets($file));
-$db = trim(fgets($file));
-
-fclose($file);
+// Данные для подключения берутся из config.php
 
 $link = mysqli_connect($host, $user, $password, $db);
 
