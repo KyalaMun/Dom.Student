@@ -33,7 +33,6 @@ $db = trim(fgets($file));
 
 fclose($file);
 
-echo "</br>$host </br>$user </br>$password</br> $db";
 $link = mysqli_connect($host, $user, $password, $db);
 
 if ($link === false) {
@@ -54,19 +53,11 @@ echo "</br> $client_count клиентов из 1";
 
 // Загрузим список сотрудников, чтобы выбрать сотрудника для заявки.
 // Динамическая типизация, что ты со мной творишь?
-$query_sotrudniki = "SELECT `worker_id` FROM `Worker`";
-$workers = [];
-$i = 0;
-if ($result_worker = mysqli_query($link, $query_sotrudniki)) {
-    foreach ($result_worker as $row) {
-        $workers = $workers + array($i => $row["worker_id"]);
-        $i++;
-    }
-}
-unset($i);
+$query_sotrudniki = "SELECT `Worker`.`worker_id`, COUNT(*) FROM `Task` INNER JOIN `Worker`"
+."ON `Task`.`worker_id`=`Worker`.`worker_id` GROUP BY `Worker`.`worker_id` ORDER BY Count(*)";
+$result_worker = mysqli_query($link, $query_sotrudniki);
+$worker_id = mysqli_fetch_array($result_worker)["worker_id"];
 
-// id случайного работника. Бедняжка ):
-$random_worker_id = $workers[rand(0, count($workers) - 1)];
 
 if ($client_count == 0) {
     echo "</br>Новый";
@@ -95,7 +86,8 @@ $client_id = mysqli_fetch_array($result_client_id)["client_id"];
 $date = date('Y-m-d');
 
 echo "<br>Клиент номер: $client_id";
-$query_create_task = "INSERT INTO `Task`(`client_id`, `worker_id`, `problem_text`, `date`, `is_closed`) VALUES('$client_id', '$random_worker_id', '$text', '$date', '0')";
+$query_create_task = "INSERT INTO `Task`(`client_id`, `worker_id`, `problem_text`, `date`, `is_closed`)".
+"VALUES('$client_id', '$worker_id', '$text', '$date', '0')";
 if(!mysqli_query($link, $query_create_task)){
     $error = mysqli_error($link);
     echo "</br>$error"; 
