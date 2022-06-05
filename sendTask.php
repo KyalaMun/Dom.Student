@@ -49,8 +49,8 @@ echo "</br> $client_count клиентов из 1";
 
 // Загрузим список сотрудников, чтобы выбрать сотрудника для заявки.
 // Динамическая типизация, что ты со мной творишь?
-$query_sotrudniki = "SELECT `Worker`.`worker_id`, COUNT(*) FROM `Task` INNER JOIN `Worker`"
-."ON `Task`.`worker_id`=`Worker`.`worker_id` GROUP BY `Worker`.`worker_id` ORDER BY Count(*)";
+$query_sotrudniki = "SELECT `Worker`.`worker_id`, COALESCE( (SELECT COUNT(*) FROM `Task`".
+"WHERE `Task`.`worker_id` = `Worker`.`worker_id` ORDER BY Count(*)), 0) as tasks FROM `Worker` ORDER By tasks";
 $result_worker = mysqli_query($link, $query_sotrudniki);
 $worker_id = mysqli_fetch_array($result_worker)["worker_id"];
 
