@@ -59,13 +59,13 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarContent">
-                    <ul class="navbar-nav mе-auto mb-2 top-menu">
+                   <ul class="navbar-nav mе-auto mb-2 top-menu">
                         <li class="nav-item">
                             <a href="#" class="nav-link">Список заявлений</a>
                         </li>
-                    </ul>
+                    </ul> 
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <button href="" class="btn btn-outline dropdown-item" onclick="exit();">Выйти</button>
+                        <button href="" class="btn btn-outline-danger dropdown-item" onclick="exit();">Выйти</button>
                     </div>
 
                 </div>
@@ -142,6 +142,7 @@
                 </div>
             </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 
 </html>
