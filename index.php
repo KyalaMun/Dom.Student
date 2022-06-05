@@ -33,7 +33,7 @@
 
 
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <button class="btn btn-outline-success dropdown-item"><a href="login.html">Войти</a></button>
+                        <button class="btn btn-outline-success dropdown-item"><a href="login.php">Войти</a></button>
                     </div>
                     <!--<ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" name="address" id="Адрес" class="form-control mb-3" required>
+                                        <input type="text" name="address" class="form-control mb-3" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">

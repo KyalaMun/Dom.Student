@@ -54,7 +54,6 @@ $query_sotrudniki = "SELECT `Worker`.`worker_id`, COALESCE( (SELECT COUNT(*) FRO
 $result_worker = mysqli_query($link, $query_sotrudniki);
 $worker_id = mysqli_fetch_array($result_worker)["worker_id"];
 
-
 if ($client_count == 0) {
     echo "</br>Новый";
     // Если в первый раз заходит на сайт
