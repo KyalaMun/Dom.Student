@@ -25,7 +25,7 @@ echo "$name, $address, $email, $phone, $text</br>";
 $host = $config["host"];
 $user = $config["user"];
 $password = $config["password"];
-$db = $config["db   "];
+$db = $config["db"];
 
 // Данные для подключения берутся из config.php
 
