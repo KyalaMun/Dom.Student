@@ -87,10 +87,9 @@ $query_create_task = "INSERT INTO `Task`(`client_id`, `worker_id`, `problem_text
 if(!mysqli_query($link, $query_create_task)){
     $error = mysqli_error($link);
     echo "</br>$error"; 
+} else{
+    mysqli_close($link);
+    // Перенаправляем...
+    header('Location: ./index.php');
 }
-
-// Перенаправляем...
-header('Location: ./index.php');
-
-mysqli_close($link);
 ?>
