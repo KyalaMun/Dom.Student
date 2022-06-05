@@ -31,7 +31,7 @@ a:nover {
 /* Header */
 .navbar-light .navbar-nav .nav-link{
  color: #111;
- font-weight: 500;
+ font-weight: 500px;
  text-transform: uppercase;
 }
 
@@ -58,7 +58,6 @@ transform: scale(0);
 
 header{
     min-height: 90px;
-    margin-bottom: 130px;
 }
 
 .contact .info .info-icon{
