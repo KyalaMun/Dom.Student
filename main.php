@@ -4,6 +4,14 @@
 
 <head>
     <?php
+
+    if(isset($_GET["exit"])){
+        if($_GET["exit"] == 1){
+            setcookie("login", "", -1);
+            setcookie("password", "", -1);
+        }
+    }
+
     if (isset($_COOKIE["login"])) {
         $login = $_COOKIE["login"];
     }
@@ -70,7 +78,7 @@
                         </li>
                     </ul>
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <button href="" class="btn btn-outline-danger dropdown-item" onclick="exit();">Выйти</button>
+                        <button href="main.php?exit=1" class="btn btn-outline-danger dropdown-item">Выйти</button>
                     </div>
                 </div>
             </div>
