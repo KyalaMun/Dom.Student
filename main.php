@@ -78,7 +78,7 @@
                         </li>
                     </ul>
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <button href="main.php?exit=1" class="btn btn-outline-danger dropdown-item">Выйти</button>
+                        <a href="main.php?exit=1" class="btn btn-outline-danger dropdown-item">Выйти</a>
                     </div>
                 </div>
             </div>
