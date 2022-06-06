@@ -9,6 +9,7 @@
         if($_GET["exit"] == 1){
             setcookie("login", "", -1);
             setcookie("password", "", -1);
+            echo "<script>window.location.replace('main.php');</script>";
         }
     }
 
