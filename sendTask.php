@@ -49,8 +49,7 @@ echo "</br> $client_count клиентов из 1";
 
 // Загрузим список сотрудников, чтобы выбрать сотрудника для заявки.
 // Динамическая типизация, что ты со мной творишь?
-$query_sotrudniki = "SELECT `Worker`.`worker_id`, COALESCE( (SELECT COUNT(*) FROM `Task`".
-"WHERE `Task`.`worker_id` = `Worker`.`worker_id` ORDER BY Count(*)), 0) as tasks FROM `Worker` ORDER By tasks";
+$query_sotrudniki = "SELECT `Worker`.`worker_id`, COALESCE( (SELECT COUNT(*) FROM `Task` WHERE `Task`.`worker_id` = `Worker`.`worker_id` AND `Task`.`is_closed` = 0 ORDER BY Count(*)), 0) as tasks FROM `Worker` ORDER By tasks";
 $result_worker = mysqli_query($link, $query_sotrudniki);
 $worker_id = mysqli_fetch_array($result_worker)["worker_id"];
 
@@ -89,6 +88,6 @@ if(!mysqli_query($link, $query_create_task)){
 } else{
     mysqli_close($link);
     // Перенаправляем...
-    header('Location: ./index.php');
+    header('Location: ./index.html');
 }
 ?>

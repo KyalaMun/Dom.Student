@@ -93,13 +93,11 @@
                                     <th class="th-sm" scope="col">Дата</th>
                                     <th class="th-sm" scope="col">Статус</th>
                                     <th class="th-sm" scope="col"></th>
-
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($list as $row) { ?>
                                     <tr>
-
 
                                         <th scope="row"><?php $task_id = $row["task_id"];
                                                         echo $task_id; ?></th>
@@ -117,7 +115,8 @@
                                         <td><?php echo "<a class='btn btn-outline-primary' href='main.php?selected_task_id=$task_id'>Перейти</a>" ?></td>
                                     </tr>
 
-                                <?php } ?>
+                                <?php }
+                                ?>
                             </tbody>
 
                         </table>
@@ -135,6 +134,25 @@
                                 $result_task = mysqli_query($link, $query_task);
                                 $row = mysqli_fetch_array($result_task);
                                 ?>
+                                <?php
+                                if (isset($_GET["status"])) {
+                                    $status = $_GET["status"];
+                                    if ($status == 0) {
+                                        $new_status = 1;
+                                    } else {
+                                        $new_status = 0;
+                                    }
+
+                                    $query_switch_status = "UPDATE `Task` SET `is_closed` = '$new_status' WHERE `task_id` = '$selected_task_id'";
+
+                                    if (!mysqli_query($link, $query_switch_status)) {
+                                        $error = mysqli_error($link);
+                                        echo "</br>$error";
+                                    }
+                                    echo "<script>window.location.replace('main.php');</script>";
+                                }
+                                ?>
+
                                 <h4>Заявление</h4>
                                 <div class="col-lg-6">
                                     <p>ФИО</p>
@@ -168,28 +186,24 @@
                                 <div class="col-12">
                                     <p>Текст обращения</p>
                                     <textarea readonly="true" placeholder="<?php echo $row["problem_text"] ?>" class="form-control mt-3" cols="30" rows="10"></textarea>
-                                    <a href="main.php?selected_task_id=<?php $status = $row['is_closed']; echo $row["task_id"];
-                                                                        echo "&status=$status"?>" class="btn btn-<?php if($status == 1){ echo "success";}
-                                                                        else { echo "danger";} ?> mt-3">
-                                        <?php if($status == 1){ echo "Открыть";}
-                                        else { echo "Закрыть";} ?>
+                                    <a href="main.php?selected_task_id=<?php $status = $row['is_closed'];
+                                                                        echo $row["task_id"];
+                                                                        echo "&status=$status" ?>" class="btn btn-<?php if ($status == 1) {
+                                                                                                                        echo "success";
+                                                                                                                    } else {
+                                                                                                                        echo "danger";
+                                                                                                                    } ?> mt-3">
+                                        <?php if ($status == 1) {
+                                            echo "Открыть";
+                                        } else {
+                                            echo "Закрыть";
+                                        } ?>
                                     </a>
                                     <a href="main.php" class="btn btn-secondary mt-3">Закрыть</a>
-                                    <?php
-                                    if(isset($_GET["status"])){$status = $_GET["status"];}
-
-                                    if($status = 0){$new_status = 1;}
-                                    else {$new_status = 0;}
-
-                                    $query_switch_status = "UPDATE `Task` SET `is_closed` = '$new_status' WHERE `task_id` = '$selected_task_id'";
-
-                                    if(!mysqli_query($link, $query_switch_status)){
-                                        $error = mysqli_error($link);
-                                        echo "</br>$error"; 
-                                    }
-                                    ?>
                                 </div>
-                            <?php } ?>
+                            <?php }
+                            mysqli_close($link);
+                            ?>
                         </div>
                     </form>
                 </div>
