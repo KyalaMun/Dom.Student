@@ -115,7 +115,8 @@
 
       <div class="checkbox mb-3">
       </div>
-      <button class="w-100 btn btn-lg btn-danger" type="submit">Войти</button>
+      <button class="w-100 btn btn-lg btn-success" type="submit" style="margin-bottom: 10px;">Войти</button>
+      <a href="index.html" class="text-decoration-none text-reset">Вернуться назад</a>
     </form>
   </main>
 </body>
