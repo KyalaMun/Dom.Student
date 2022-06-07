@@ -65,7 +65,7 @@
     $list = $result_list;
     ?>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a href="" class="navbar-brand">Dom.Student</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false">
@@ -79,7 +79,7 @@
                         </li>
                     </ul>
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                        <a href="main.php?exit=1" class="btn btn-outline-danger dropdown-item">Выйти</a>
+                        <a href="main.php?exit=1" class="btn btn-outline-danger dropdown-item" style="color: gray;">Выйти</a>
                     </div>
                 </div>
             </div>
