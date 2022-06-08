@@ -74,9 +74,6 @@
 
                 <div class="collapse navbar-collapse" id="navbarContent">
                     <ul class="navbar-nav mе-auto mb-2 top-menu">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">Список заявлений</a>
-                        </li>
                     </ul>
                     <div class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                         <a href="main.php?exit=1" class="btn btn-outline-danger dropdown-item" style="color: gray;">Выйти</a>
